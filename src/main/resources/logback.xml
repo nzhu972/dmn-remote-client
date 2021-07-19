@@ -1,0 +1,17 @@
+<configuration>
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%d{HH:mm:ss.SSS} [%-15.15thread] %-5level %-30.30logger - %msg%n</pattern>
+    </encoder>
+  </appender>
+  <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+    <encoder>
+      <pattern>%d{HH:mm:ss.SSS} [%-15.15thread] %-5level %-30.30logger - %msg%n</pattern>
+    </encoder>
+    <file>target/data-service.log</file>
+  </appender>
+  <root level="INFO">
+    <!--<appender-ref ref="FILE"/>-->
+    <appender-ref ref="STDOUT"/>
+  </root>
+</configuration>
