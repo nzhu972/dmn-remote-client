@@ -1,0 +1,46 @@
+{
+  "type" : "SUCCESS",
+  "msg" : "OK from container 'traffic-violation_1.0.0-SNAPSHOT'",
+  "result" : {
+    "dmn-evaluation-result" : {
+      "messages" : [ ],
+      "model-namespace" : "https://github.com/kiegroup/drools/kie-dmn/_A4BCA8B8-CF08-433F-93B2-A2598F19ECFF",
+      "model-name" : "Traffic Violation",
+      "decision-name" : [ ],
+      "dmn-context" : {
+        "Violation" : {
+          "Type" : "speed",
+          "Speed Limit" : 100,
+          "Actual Speed" : 135
+        },
+        "Driver" : {
+          "Points" : 15
+        },
+        "Fine" : {
+          "Points" : 7,
+          "Amount" : 1000
+        },
+        "Should the driver be suspended?" : "Yes"
+      },
+      "decision-results" : {
+        "_4055D956-1C47-479C-B3F4-BAEB61F1C929" : {
+          "messages" : [ ],
+          "decision-id" : "_4055D956-1C47-479C-B3F4-BAEB61F1C929",
+          "decision-name" : "Fine",
+          "result" : {
+            "Points" : 7,
+            "Amount" : 1000
+          },
+          "status" : "SUCCEEDED"
+        },
+        "_8A408366-D8E9-4626-ABF3-5F69AA01F880" : {
+          "messages" : [ ],
+          "decision-id" : "_8A408366-D8E9-4626-ABF3-5F69AA01F880",
+          "decision-name" : "Should the driver be suspended?",
+          "result" : "Yes",
+          "status" : "SUCCEEDED"
+        }
+      }
+    }
+  }
+}
